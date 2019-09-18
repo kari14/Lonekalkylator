@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src='app.js'></script>
+        <meta charset="UTF-8"/>
         <title>Calc</title>
     </head>
     <body>
-        <h1>This is my calc</h1>
-        
-        <form>
-            Initial Salary: <input type="text" name="initialSalary"><br>
-            Experience in years: <input type="text" name="experience"><br>
-            Increase in percentage: <input type="text" name="increase"><br>
-            
-            New Salary: <input type="text" name="newSalary"><br>
-            <input type="button" value="Sum" onclick="calcSum()">
-        </form>
+        <div class="jumbotron text-center">
+            <h1>Kári's Salary Calculator</h1>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- <input type="button" id="basicView" value="Baisc View"/>-->
+                    <h2>Basic view</h2>
+                    <div id="basic">
+                        Initial Salary: <input type="text" name="initialSalary"><br>
+                        Experience in years: <select class="experience"></select><br>
+                        Increase in percentage: <input type="text" name="increase"><br>
+                        
+                        New Salary: <input type="text" name="newSalary"><br>
+                        <input type="button" value="Sum" onclick="calcSum()"/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <!--<input type="button" id="tableView" value="Table View"/>-->
+                    <h2>Table view</h2>
+                    <div id="table">
+                        Initial Salary: <input type="text" name="initialSalaryTable"/><br>
+                        Experience in years: <select class="experience"></select><br>
+                        Proposed Salary: <input type="text" name="proposedSalaryTable"/></br>
+                        
+                        Average increase between years: <input type="text" name="increaseBetweenYears"/></br>
+
+                        <input type="button" value="Sum" onclick="calcTable()"/> 
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
